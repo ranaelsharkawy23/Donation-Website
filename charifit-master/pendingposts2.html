@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+    form {
+margin-top: 50px; 
+}
+.arrow-button {
+background-color: #3cc78f;
+border: none;
+color: white;
+padding: 5px 10px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 20px;
+margin: 8px 4px;
+cursor: pointer;
+border-radius: 50%;
+width: 40px;
+height: 40px;
+}
+
+/* Style the arrow */
+.arrow-button::after {
+content: '\2039'; /* Unicode for left-pointing arrow */
+}
+
+
+ </style>
+ <script>
+   function goBack() {
+     // Use the window.history object to navigate back
+     window.history.back();
+   }
+   </script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Charifit</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- CSS here -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/gijgo.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/slicknav.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* Add your CSS styles here */
+        .post {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .post h2 {
+            margin-top: 0;
+        }
+
+        .post p {
+            margin: 0;
+        }
+
+        .post-buttons {
+            margin-top: 10px;
+        }
+
+        .post-buttons button {
+            background-color: #3CC78F;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-right: 10px;
+        }
+
+        .post-buttons button:hover {
+            background-color: #5aa85e;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="header-area ">
+        <div class="header-top_area">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-6 col-md-12 col-lg-8">
+                    </div>
+                    <div class="col-xl-6 col-md-6 col-lg-4">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="sticky-header" class="main-header-area">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-xl-3 col-lg-3">
+                        <div class="logo">
+                            <a>
+                                <img src="img/logo.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xl-9 col-lg-9">
+                        <div class="main-menu">
+                            <nav>
+                                <ul id="navigation">
+                                    <li><a href="orghomepage2.html">home</a></li>
+                                </ul>
+                            </nav>
+                            <div class="Appointment">
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="mobile_menu d-block d-lg-none"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="bradcam_area breadcam_bg overlay d-flex align-items-center justify-content-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="bradcam_text text-center">
+                    <h3>Your posts</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="pending-details-container"></div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Retrieve pending donation details from localStorage
+        var pendingDonation = localStorage.getItem('pendingDonation');
+        if (pendingDonation) {
+            // Parse the JSON string to get the object
+            pendingDonation = JSON.parse(pendingDonation);
+            
+            // Display the pending donation details
+            var pendingDetailsContainer = document.getElementById('pending-details-container');
+            if (pendingDetailsContainer) {
+                var html = `
+                    <h2>Pending Donation Details</h2>
+                    <p><strong>Category:</strong> ${pendingDonation.category}</p>
+                    <p><strong>Description:</strong> ${pendingDonation.description}</p>
+                    <!-- Add other details as needed -->
+                `;
+                pendingDetailsContainer.innerHTML = html;
+            }
+            
+            // Clear the stored pending donation details from localStorage
+            localStorage.removeItem('pendingDonation');
+        } else {
+            // Display a message if there are no pending donations
+            var pendingDetailsContainer = document.getElementById('pending-details-container');
+            if (pendingDetailsContainer) {
+            }
+        }
+    });
+
+    function editPost(postId) {
+        var postElement = document.getElementById(postId);
+        if (!postElement) {
+            console.log("Post with ID", postId, "not found.");
+            return;
+        }
+
+        var categoryElement = postElement.querySelector('.category');
+        var descriptionElement = postElement.querySelector('.description');
+
+        if (!categoryElement || !descriptionElement) {
+            console.log("Category or description element not found in post with ID", postId);
+            return;
+        }
+
+        var category = categoryElement.innerText.split(': ')[1];
+        var description = descriptionElement.innerText.split(': ')[1];
+
+        var newCategory = prompt("Enter the new category:", category);
+        var newDescription = prompt("Enter the new description:", description);
+
+        if (newCategory !== null && newDescription !== null) {
+            categoryElement.innerText = "Category: " + newCategory;
+            descriptionElement.innerText = "Description: " + newDescription;
+            console.log("Post with ID", postId, "edited.");
+        }
+    }
+
+
+    function deletePost(postId) {
+        // Confirm deletion before proceeding
+        if (confirm("Are you sure you want to delete this post?")) {
+            // Delete the post
+            var postElement = document.getElementById(postId);
+            if (postElement) {
+                postElement.parentNode.removeChild(postElement);
+                console.log("Post with ID", postId, "deleted.");
+            }
+        }
+    }
+</script>
+
+
+<!-- First Donation Post -->
+<div class="post" id="post1">
+    <h2>Donation Post 1</h2>
+    <p class="category"><strong>Category:</strong> Clothes</p>
+    <p class="description"><strong>Description:</strong> Mens size Medium</p>
+    <div class="post-buttons">
+        <button class="edit-btn" onclick="editPost('post1')">Edit</button>
+        <button class="delete-btn" onclick="deletePost('post1')">Delete</button>
+    </div>
+</div>
+
+<div class="post" id="post2">
+    <h2>Donation Post 2</h2>
+    <p class="category"><strong>Category:</strong> Toys</p>
+    <p class="description"><strong>Description:</strong> age range 3-10</p>
+    <div class="post-buttons">
+        <button class="edit-btn" onclick="editPost('post2')">Edit</button>
+        <button class="delete-btn" onclick="deletePost('post2')">Delete</button>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="footer_top">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-4 col-md-6 col-lg-4 ">
+                    <div class="footer_widget">
+                        
+            </div>
+        </div>
+    </div>
+    <div class="copy-right_text">
+        <div class="container">
+            <div class="row">
+                <div class="bordered_1px "></div>
+                <div class="col-xl-12">
+                    <p class="copy_right text-center">
+                        <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This website is made with <i class="ti-heart" aria-hidden="true"></i> by team Hossam Hassan</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

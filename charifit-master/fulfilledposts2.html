@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+    form {
+margin-top: 50px; 
+}
+.arrow-button {
+background-color: #3cc78f;
+border: none;
+color: white;
+padding: 5px 10px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 20px;
+margin: 8px 4px;
+cursor: pointer;
+border-radius: 50%;
+width: 40px;
+height: 40px;
+}
+#timeSlotLabel {
+  color: black;
+  font-size: 16px;
+}
+#timeSlots {
+  font-family: sans-serif; /* Setting font family to sans-serif for the time slots */
+}
+
+/* Style the arrow */
+.arrow-button::after {
+content: '\2039'; /* Unicode for left-pointing arrow */
+}
+
+
+ </style>
+ <script>
+   function goBack() {
+     // Use the window.history object to navigate back
+     window.history.back();
+   }
+   document.addEventListener("DOMContentLoaded", function() {
+  const confirmButton = document.getElementById("confirmButton");
+  const timeSlotsDropdown = document.getElementById("timeSlots");
+
+  // Function to handle confirm button click
+  function handleConfirmClick() {
+    const selectedTimeSlot = timeSlotsDropdown.value;
+    if (selectedTimeSlot) {
+      alert("You have selected: " + selectedTimeSlot);
+    } else {
+      alert("Please select a time slot.");
+    }
+  }
+
+  // Event listener for the confirm button click
+  confirmButton.addEventListener("click", handleConfirmClick);
+});
+
+   </script>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Charifit</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS here -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/gijgo.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/slicknav.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- CSS for notification -->
+    <style>
+        .post {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            position: relative; /* Ensure posts are positioned relative */
+        }
+
+        .notification {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: #3CC78F;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="header-area ">
+        <div class="header-top_area">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-6 col-md-12 col-lg-8">
+                    </div>
+                    <div class="col-xl-6 col-md-6 col-lg-4">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="sticky-header" class="main-header-area">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-xl-3 col-lg-3">
+                        <div class="logo">
+                            <a>
+                                <img src="img/logo.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xl-9 col-lg-9">
+                        <div class="main-menu">
+
+                            <nav>
+                                <ul id="navigation">
+                                    <li><a href="orghomepage2.html">home</a></li>
+                                </ul>
+
+                                <!-- Navigation links -->
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="mobile_menu d-block d-lg-none"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Bradcam area -->
+<div class="bradcam_area breadcam_bg overlay d-flex align-items-center justify-content-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="bradcam_text text-center">
+                    <h3>Fulfilled posts</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Fulfilled Donation Posts -->
+<div id="fulfilled-details-container">
+    <!-- Existing posts -->
+    <div class="post">
+        <h2>John Doe's Donation</h2>
+        <p><strong>Donor:</strong> John Doe</p>
+        <p><strong>Date Accepted:</strong> 2024-04-30</p>
+        <ul>
+            <li>Clothes</li>
+            <li>Shoes</li>
+        </ul>
+        <p><strong>Clothes:</strong> Male, Size: Medium</p>
+        <p><strong>Shoes:</strong> Male, Size: 10</p>
+        <button class="delete-btn">Delete</button>
+
+    </div>
+    <div class="post">
+        <h2>Jane Smith's Donation</h2>
+        <p><strong>Donor:</strong> Jane Smith</p>
+        <p><strong>Date Accepted:</strong> 2024-05-01</p>
+
+        <ul>
+            <li>Books</li>
+            <li>School Supplies</li>
+        </ul>
+        <div>
+            <label for="timeSlots" id="timeSlotLabel">Select a Time Slot For Drop-Off:</label>
+            <select id="timeSlots">
+                <option value="9:00 AM - 10:00 AM">9:00 AM - 10:00 AM</option>
+                <option value="10:00 AM - 11:00 AM">10:00 AM - 11:00 AM</option>
+                <option value="11:00 AM - 12:00 PM">11:00 AM - 12:00 PM</option>
+                <option value="12:00 PM - 1:00 PM">12:00 PM - 1:00 PM</option>
+                <option value="1:00 PM - 2:00 PM">1:00 PM - 2:00 PM</option>
+                <option value="2:00 PM - 3:00 PM">2:00 PM - 3:00 PM</option>
+                <option value="3:00 PM - 4:00 PM">3:00 PM - 4:00 PM</option>
+                
+                <!-- Add more time slots as needed -->
+            </select>
+            <button id="confirmButton">Confirm</button>
+        </div>
+        
+        
+        <button class="delete-btn">Delete</button>
+        
+
+    </div>
+    <!-- New post for pro bono teaching -->
+    <div class="post">
+        <h2>Pro Bono Teaching</h2>
+        <p><strong>Donor:</strong> Dr. Sarah Johnson</p>
+        <p><strong>Date Accepted:</strong> 2024-05-05</p>
+        <p><strong>Specialty:</strong> Mathematics</p>
+        <p><strong>Teacher Contact:</strong> sarah.johnson@example.com</p>
+        <p><strong>Teacher Qualifications:</strong> PhD in Mathematics</p>
+        <p><strong>Teacher Experience:</strong> 10 years of teaching experience</p>
+        <div class="notification">New</div>
+        <button class="delete-btn">Delete</button>
+
+    </div>
+</div>
+
+<!-- JavaScript here -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/magnific-popup.min.js"></script>
+<script src="js/isotope.pkgd.min.js"></script>
+<script src="js/jquery.counterup.min.js"></script>
+<script src="js/waypoints.min.js"></script>
+<script src="js/ajax-mail.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.nice-select.min.js"></script>
+<script src="js/slicknav.min.js"></script>
+<script src="js/main.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+        // Smoothly delete post on button click
+        $('.delete-btn').on('click', function(){
+            $(this).closest('.post').fadeOut(500, function(){
+                $(this).remove();
+            });
+        });
+    });
+</script>
+<style>
+    /* CSS for delete button */
+    .delete-btn {
+        background-color: #ff6b6b;
+        color: white;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+        margin-right: 10px;
+        transition: background-color 0.3s ease;
+    }
+
+    .delete-btn:hover {
+        background-color: #ff4d4d;
+    }
+</style>
+
+<footer class="footer">
+    <div class="footer_top">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-4 col-md-6 col-lg-4 ">
+                    <div class="footer_widget">
+                        
+            </div>
+        </div>
+    </div>
+    <div class="copy-right_text">
+        <div class="container">
+            <div class="row">
+                <div class="bordered_1px "></div>
+                <div class="col-xl-12">
+                    <p class="copy_right text-center">
+                        <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This website is made with <i class="ti-heart" aria-hidden="true"></i> by team Hossam Hassan</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

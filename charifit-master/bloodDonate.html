@@ -1,0 +1,376 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+    <style>
+        /* CSS to change the color and size of the label */
+        #custom-label {
+      color: black; /* Change color to blue */
+      font-size: 20px; /* Change font size to 20 pixels */
+    }
+
+      </style>
+
+<style>
+  
+.map{
+  height: 200px;
+  width: 100%;
+}
+
+
+ </style>
+ 
+
+
+<head>
+    <style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        font-family: Arial, sans-serif;
+    }
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+    th {
+        background-color: #3CC78F;
+        color: white;
+    }
+
+      </style>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Charifit</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/gijgo.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/slicknav.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+
+    <!-- header-start -->
+    <header>
+        <div class="header-area ">
+            <div class="header-top_area">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-6 col-md-12 col-lg-8">
+                        </div>
+                        <div class="col-xl-6 col-md-6 col-lg-4">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-xl-3 col-lg-3">
+                            <div class="logo">
+                                <a>
+                                    <img src="img/logo.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-9 col-lg-9">
+                            <div class="main-menu">
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><a href="donor2.html">home</a></li>
+                                        <li><a href="#">Volunteer <i class="ti-angle-down"></i></a>
+                                            <ul class="submenu">
+                                                <li><a href="teacher.html">Teacher</a></li>
+                                                <li><a href="clinic2.html">Doctor</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </nav>
+                                <div class="Appointment">
+                                    <div class="book_btn d-none d-lg-block">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+
+    <!-- bradcam_area_start  -->
+    <div class="bradcam_area breadcam_bg overlay d-flex align-items-center justify-content-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="bradcam_text text-center">
+                        <h3>Blood Donation Requests</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     
+    
+    <form>
+        <label for="hospital">Hospital:</label>
+        <select id="hospital" name="hospital" onchange="filterTable1()">
+          <option value="">All</option>
+          <option value="Hayah Hospital">Hayah Hospital</option>
+            <option value="Golf Hospital">Golf Hospital</option>
+            <option value="Andalus Hospital">Andalus Hospital</option>
+            <option value="Cleopatra Hospital">Cleopatra Hospital</option>
+            
+            <option value="Misr Hospital">Misr Hospital</option>
+
+            
+        </select>
+
+        <label for="area">Area:</label>
+      <select id="area" name= "area" onchange="filterTable1()">
+        <option value="">All</option>
+        <option value="Masr El Gedida">Masr El Gedida</option>
+        <option value="Zayed">Zayed</option>
+        <option value="Kafr Abdo">Kafr Abdo</option>
+      </select>
+    
+        <label for="governate">Governate:</label>
+      <select id="governate" name= "governate" onchange="filterTable1()">
+        <option value="">All</option>
+        <option value="Cairo">Cairo</option>
+        <option value="Giza">Giza</option>
+        <option value="Alexandria">Alexandria</option>
+
+        
+      </select>
+
+      
+    
+      </form>
+      <div> </div>
+    <table id="donationRequests">
+        <thead>
+          <tr>
+            <th>Hospital</th>
+            <th>Area</th>
+            <th>Governate</th>
+            
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            
+            <td class="hospital">Hayah Hospital</td>
+            <td class="area">Masr El Gedida</td>
+            <td class="governate">Cairo</td>
+            <td>
+              <details> 
+                <summary style="color:  #3CC78F;">View Details</summary> 
+                <div> 
+                  <div> Patient Name: Nadeen Hassan</div> 
+                  <div> Blood Type: A+ </div> 
+                  <div> Address: 123 Main St. </div> 
+                  <div> Hospital Name: Hayah Hospital</div>
+                  <div> Governate: Cairo</div>
+                  <div> RH factor: Negative.</div>
+                  <div> Location: <div id="map1" class="map" ></div> </div>
+                  
+                </div>
+              </details> 
+            </td>
+            <td><button onclick="displayMessage(this)" style="color: #fff; background-color: #3CC78F; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: background-color 0.3s;">Contribute</button></td>
+
+
+          </tr>
+          <tr>
+            
+            <td class="hospital">Golf Hospital</td>
+            <td class="area">Zayed</td>
+            <td class="governate">Giza</td>
+            <td>
+                <details> 
+                    <summary style="color:  #3CC78F;">View Details</summary>
+              <div> 
+                <div> Patient Name: Rana Ahmed</div> 
+                <div> Blood Type: B+ </div> 
+                  <div> Address: 123 Pine St. </div> 
+                  <div> Hospital Name: Golf Hospital</div>
+                  <div> Governate: Giza</div>
+                  <div> RH factor: Negative.</div>
+                  <div> Location: <div id="map2" class="map"></div> </div>
+              </div> 
+          </details> </td>
+          <td><button onclick="displayMessage(this)" style="color: #fff; background-color: #3CC78F; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: background-color 0.3s;">Contribute</button></td>
+        </tr>
+    
+          <tr>
+            
+            <td class="hospital">Andalus Hospital</td>
+            <td class="area">Kafr Abdo</td>
+            <td class="governate">Alexandria</td>
+            <td>
+                <details> 
+                    <summary style="color:  #3CC78F;">View Details</summary> 
+              <div> 
+                <div> Patient Name: Jana Azmy</div> 
+                <div> Blood Type: O- </div> 
+                <div> Address: 123 Oak St. </div> 
+                <div> Hospital Name: Andalus Hospital</div>
+                <div> Governate: Alexandria</div>
+                <div> RH factor: Positive.</div>
+                <div> Location: <div id="map3" class="map" ></div> </div>
+              </div> 
+          </details> </td>
+          <td><button onclick="displayMessage(this)" style="color: #fff; background-color: #3CC78F; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: background-color 0.3s;">Contribute</button></td>
+        </tr>
+
+          <tr>
+            
+            <td class="hospital">Cleopatra Hospital</td>
+            <td class="area">Kafr Abdo</td>
+            <td class="governate">Alexandria</td>
+            <td>
+              <details> 
+                <summary style="color:  #3CC78F;">View Details</summary> 
+                <div> 
+                  <div> Patient Name: Karim Mina</div> 
+                  <div> Blood Type: A+ </div> 
+                  <div> Address: 123 Alfa St. </div> 
+                  <div> Hospital Name:Cleopatra Hospital</div>
+                  <div> Governate: Alexandria</div>
+                  <div> RH factor: Positive.</div>
+                  <div> Location: <div id="map5" class="map" ></div> </div>
+                  
+                </div>
+              </details> 
+            </td>
+            <td><button onclick="displayMessage(this)" style="color: #fff; background-color: #3CC78F; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: background-color 0.3s;">Contribute</button></td>
+
+
+          </tr>
+
+        
+
+          <tr>
+            
+            <td class="hospital">Misr Hospital</td>
+            <td class="area">Zayed</td>
+            <td class="governate">Giza</td>
+            <td>
+              <details> 
+                <summary style="color:  #3CC78F;">View Details</summary> 
+                <div> 
+                  <div> Patient Name: Mohamed Bishbishy</div> 
+                  <div> Blood Type: A- </div> 
+                  <div> Address: 123 Lavender St. </div> 
+                  <div> Hospital Name: Misr Hospital</div>
+                  <div> Governate: Giza</div>
+                  <div> RH factor: Positive.</div>
+                  <div> Location: <div id="map4" class="map" ></div> </div>
+                  
+                </div>
+              </details> 
+            </td>
+            <td><button onclick="displayMessage(this)" style="color: #fff; background-color: #3CC78F; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: background-color 0.3s;">Contribute</button></td>
+
+
+          </tr>
+    
+        </tbody>
+      </table>
+    
+      <footer class="footer">
+        <div class="footer_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-md-6 col-lg-4 ">
+                        <div class="footer_widget">
+                            
+                </div>
+            </div>
+        </div>
+        <div class="copy-right_text">
+            <div class="container">
+                <div class="row">
+                    <div class="bordered_1px "></div>
+                    <div class="col-xl-12">
+                        <p class="copy_right text-center">
+                            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This website is made with <i class="ti-heart" aria-hidden="true"></i> by team Hossam Hassan</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+          
+ 
+
+<!-- link that opens popup -->
+
+<!-- JS here -->
+<script src="js/vendor/modernizr-3.5.0.min.js"></script>
+<script src="js/vendor/jquery-1.12.4.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/isotope.pkgd.min.js"></script>
+<script src="js/ajax-form.js"></script>
+<script src="js/waypoints.min.js"></script>
+<script src="js/jquery.counterup.min.js"></script>
+<script src="js/imagesloaded.pkgd.min.js"></script>
+<script src="js/scrollIt.js"></script>
+<script src="js/jquery.scrollUp.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/nice-select.min.js"></script>
+<script src="js/jquery.slicknav.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/gijgo.min.js"></script>
+<!--contact js-->
+<script src="js/contact.js"></script>
+<script src="js/jquery.ajaxchimp.min.js"></script>
+<script src="js/jquery.form.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/mail-script.js"></script>
+
+<script src="js/main.js"></script>
+
+<script> function displayMessage(button) {
+    var row = button.closest('tr');
+    alert("Thank you for your contribution,The Hospital will be notified for your arrival!");
+    row.parentNode.removeChild(row);
+}
+
+
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAq6sEj0YrcX9iP5pNUqZFG0RiXEf9vTG8&callback=initMaps" async defer></script>
+</body>
+
+</html>

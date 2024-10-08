@@ -1,0 +1,610 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+    <link rel="stylesheet" href="organizations.css">
+    <script src="organizations.js"></script>
+
+    <style>
+
+
+  
+  .map{
+    height: 200px;
+    width: 100%;
+  }
+  
+  
+   
+        form {
+   margin-top: 50px; 
+ }
+ .arrow-button {
+ background-color: #3cc78f;
+ border: none;
+ color: white;
+ padding: 5px 10px;
+ text-align: center;
+ text-decoration: none;
+ display: inline-block;
+ font-size: 20px;
+ margin: 8px 4px;
+ cursor: pointer;
+ border-radius: 50%;
+ width: 40px;
+ height: 40px;
+}
+
+/* Style the arrow */
+.arrow-button::after {
+ content: '\2039'; /* Unicode for left-pointing arrow */
+}
+ 
+ 
+     </style>
+     <script>
+       function goBack() {
+         // Use the window.history object to navigate back
+         window.history.back();
+       }
+       </script>
+      
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Charifit</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/gijgo.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/slicknav.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+
+    <!-- header-start -->
+    <header>
+        <div class="header-area ">
+            <div class="header-top_area">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-6 col-md-12 col-lg-8">
+                        </div>
+                        <div class="col-xl-6 col-md-6 col-lg-4">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-xl-3 col-lg-3">
+                            <div class="logo">
+                                <a>
+                                    <img src="img/logo.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-9 col-lg-9">
+                            <div class="main-menu">
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><a href="donor2.html">Home</a></li>
+                                        <li><a href="#">Volunteer <i class="ti-angle-down"></i></a>
+                                            <ul class="submenu">
+                                                <li><a href="teacher.html">Teacher</a></li>
+                                                <li><a href="clinic2.html">Doctor</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </nav>
+                                
+                                
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+
+    <!-- bradcam_area_start  -->
+    <div class="bradcam_area breadcam_bg overlay d-flex align-items-center justify-content-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="bradcam_text text-center">
+                        <h3>Organizations</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- bradcam_area_end  -->
+    <div class="filters">
+        <h2>Filter Organizations</h2>
+        <p>Select your preferences below to find organizations that align with your criteria:</p>
+
+       <!-- Add IDs to filter elements -->
+       <div class="filter-group">
+        <label for="areaFilter">Area:</label>
+        <select id="areaFilter" onchange="applyFilters()">
+            <option value="">All</option>
+            <!-- Add options dynamically if needed -->
+        </select>
+    </div>
+    <div class="filter-group">
+        <label for="governorateFilter">Governorate:</label>
+        <select id="governorateFilter" onchange="applyFilters()">
+            <option value="">All</option>
+            <!-- Add options dynamically if needed -->
+        </select>
+    </div>
+    <div class="filter-group">
+        <label for="orgTypeFilter">Organization Type:</label>
+        <select id="orgTypeFilter" onchange="applyFilters()">
+            <option value="">All</option>
+            <!-- Add options dynamically if needed -->
+        </select>
+    </div>
+
+    <div class="search-container">
+        <input type="text" id="searchInput" onkeyup="searchOrganization()" placeholder="Search for organization names...">
+      </div>
+      <table id="organizationTable">
+        <thead>
+          <tr>
+            <th>Organization Name</th>
+            <th>Area</th>
+            <th>Governorate</th>
+            <th>Organization Type</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td>Tabaro3</td>
+            <td>Smouha</td>
+            <td>Alexandria</td>
+            <td>Charity Foundation</td>
+            <td>
+                <details> 
+                  <summary style="color:  #3CC78F;">View Details</summary> 
+                  <div> 
+                    <div> Contact Details:a@yahoo.com</div>
+                    <div> Address: 123 Main St. </div>
+                    <div> Location: <div id="map3" class="map" ></div> </div>
+                    
+                  </div>
+                </details> 
+              </td>
+          </tr>
+          <tr>
+            <td>Hayat</td>
+            <td>ABC</td>
+            <td>Cairo</td>
+            <td>Charity Foundation</td>
+            <td>
+                <details> 
+                  <summary style="color:  #3CC78F;">View Details</summary> 
+                  <div> 
+                    <div> Contact Details:a@yahoo.com</div>
+                    <div> Address: 123 Main St. </div>
+                    <div> Location: <div id="map1" class="map" ></div> </div>
+                    
+                  </div>
+                </details> 
+              </td>
+          </tr>
+          <tr>
+            <td>Enkez</td>
+            <td>DFC</td>
+            <td>Giza</td>
+            <td>Charity Foundation</td>
+            <td>
+                <details> 
+                  <summary style="color:  #3CC78F;">View Details</summary> 
+                  <div> 
+                    <div> Contact Details:a@yahoo.com</div>
+                    <div> Address: 123 Main St. </div>
+                    <div> Location: <div id="map2" class="map" ></div> </div>
+                    
+                  </div>
+                </details> 
+              </td>
+          </tr>
+          <tr>
+            <td>Tabaro3at</td>
+            <td>LKJ</td>
+            <td>Alexandria</td>
+            <td>Charity Foundation</td>
+            <td>
+                <details> 
+                  <summary style="color:  #3CC78F;">View Details</summary> 
+                  <div> 
+                    <div> Contact Details:a@yahoo.com</div>
+                    <div> Address: 123 Main St. </div>
+                    <div> Location: <div id="map5" class="map" ></div> </div>
+                    
+                  </div>
+                </details> 
+              </td>
+          </tr>
+          <tr>
+            <td>Mosta2bal</td>
+            <td>YTR</td>
+            <td>Giza</td>
+            <td>Charity Foundation</td>
+            <td>
+                <details> 
+                  <summary style="color:  #3CC78F;">View Details</summary> 
+                  <div> 
+                    <div> Contact Details:a@yahoo.com</div>
+                    <div> Address: 123 Main St. </div>
+                    <div> Location: <div id="map4" class="map" ></div> </div>
+                    
+                  </div>
+                </details> 
+              </td>
+          </tr>
+          <tr>
+            <td>Yamin</td>
+            <td>KKJ</td>
+            <td>Cairo</td>
+            <td>Charity Foundation</td>
+            <td>
+                <details> 
+                  <summary style="color:  #3CC78F;">View Details</summary> 
+                  <div> 
+                    <div> Contact Details:a@yahoo.com</div>
+                    <div> Address: 123 Main St. </div>
+                    <div> Location: <div id="map1" class="map" ></div> </div>
+                    
+                  </div>
+                </details> 
+              </td>
+          </tr>
+          <tr>
+            <td>Yamal</td>
+            <td>HJF</td>
+            <td>Alexandria</td>
+            <td>Charity Foundation</td>
+            <td>
+                <details> 
+                  <summary style="color:  #3CC78F;">View Details</summary> 
+                  <div> 
+                    <div> Contact Details:a@yahoo.com</div>
+                    <div> Address: 123 Main St. </div>
+                    <div> Location: <div id="map5" class="map" ></div> </div>
+                    
+                  </div>
+                </details> 
+              </td>
+          </tr>
+          <tr>
+            <td>Bokra</td>
+            <td>ASD</td>
+            <td>Giza</td>
+            <td>Charity Foundation</td>
+            <td>
+                <details> 
+                  <summary style="color:  #3CC78F;">View Details</summary> 
+                  <div> 
+                    <div> Contact Details:a@yahoo.com</div>
+                    <div> Address: 123 Main St. </div>
+                    <div> Location: <div id="map2" class="map" ></div> </div>
+                    
+                  </div>
+                </details> 
+              </td>
+          </tr>
+          <tr>
+            <td>Resala</td>
+            <td>Smouha</td>
+            <td>Alexandria</td>
+            <td>Charity Foundation</td>
+            <td>
+                <details> 
+                  <summary style="color:  #3CC78F;">View Details</summary> 
+                  <div> 
+                    <div> Contact Details:a@yahoo.com</div>
+                    <div> Address: 123 Main St. </div>
+                    <div> Location: <div id="map3" class="map" ></div> </div>
+                    
+                  </div>
+                </details> 
+              </td>
+          </tr>
+          <tr>
+            <td>Kheir</td>
+            <td>Smouha</td>
+            <td>Alexandria</td>
+            <td>Charity Foundation</td>
+            <td>
+                <details> 
+                  <summary style="color:  #3CC78F;">View Details</summary> 
+                  <div> 
+                    <div> Contact Details:a@yahoo.com</div>
+                    <div> Address: 123 Main St. </div>
+                    <div> Location: <div id="map3" class="map" ></div> </div>
+                    
+                  </div>
+                </details> 
+              </td>
+          </tr>
+          <tr>
+            <td>Le3b</td>
+            <td>Smouha</td>
+            <td>Alexandria</td>
+            <td>Charity Foundation</td>
+            <td>
+                <details> 
+                  <summary style="color:  #3CC78F;">View Details</summary> 
+                  <div> 
+                    <div> Contact Details:a@yahoo.com</div>
+                    <div> Address: 123 Main St. </div>
+                    <div> Location: <div id="map3" class="map" ></div> </div>
+                    
+                  </div>
+                </details> 
+              </td>
+          </tr>
+          <tr>
+            <td>Help</td>
+            <td>Smouha</td>
+            <td>Alexandria</td>
+            <td>Hospital</td>
+            <td>
+                <details> 
+                  <summary style="color:  #3CC78F;">View Details</summary> 
+                  <div> 
+                    <div> Contact Details:a@yahoo.com</div>
+                    <div> Address: 123 Main St. </div>
+                    <div> Location: <div id="map5" class="map" ></div> </div>
+                    
+                  </div>
+                </details> 
+              </td>
+          </tr>
+          <tr>
+            <td>3alemny</td>
+            <td>Smouha</td>
+            <td>Alexandria</td>
+            <td>School</td>
+            <td>
+                <details> 
+                  <summary style="color:  #3CC78F;">View Details</summary> 
+                  <div> 
+                    <div> Contact Details:a@yahoo.com</div>
+                    <div> Address: 123 Main St. </div>
+                    <div> Location: <div id="map5" class="map" ></div> </div>
+                    
+                  </div>
+                </details> 
+              </td>
+          </tr>
+          <tr>
+            <td>Masged</td>
+            <td>Smouha</td>
+            <td>Alexandria</td>
+            <td>Mosque</td>
+            <td>
+                <details> 
+                  <summary style="color:  #3CC78F;">View Details</summary> 
+                  <div> 
+                    <div> Contact Details:a@yahoo.com</div>
+                    <div> Address: 123 Main St. </div>
+                    <div> Location: <div id="map5" class="map" ></div> </div>
+                    
+                  </div>
+                </details> 
+              </td>
+          </tr>
+          <tr>
+            <td> HG</td>
+            <td>Smouha</td>
+            <td>Alexandria</td>
+            <td>Hospital</td>
+            <td>
+                <details> 
+                  <summary style="color:  #3CC78F;">View Details</summary> 
+                  <div> 
+                    <div> Contact Details:a@yahoo.com</div>
+                    <div> Address: 123 Main St. </div>
+                    <div> Location: <div id="map5" class="map" ></div> </div>
+                    
+                  </div>
+                </details> 
+              </td>
+          </tr>
+          <tr>
+            <td>Bank Fos7a</td>
+            <td>Smouha</td>
+            <td>Alexandria</td>
+            <td>Charity Foundation</td>
+            <td>
+                <details> 
+                  <summary style="color:  #3CC78F;">View Details</summary> 
+                  <div> 
+                    <div> Contact Details:a@yahoo.com</div>
+                    <div> Address: 123 Main St. </div>
+                    <div> Location: <div id="map3" class="map" ></div> </div>
+                    
+                  </div>
+                </details> 
+              </td>
+          </tr>
+          <!-- Add more rows as needed -->
+        </tbody>
+      </table>
+      
+    
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        populateFilters();
+        applyFilters(); // Call applyFilters here
+    });
+
+    function populateFilters() {
+        // Get unique values for each filter category
+        var areas = getUniqueValues(1); // Assuming Area is the second column
+        var governorates = getUniqueValues(2); // Assuming Governorate is the third column
+        var orgTypes = getUniqueValues(3); // Assuming Organization Type is the fourth column
+        
+        // Populate filter options
+        populateFilterOptions("areaFilter", areas);
+        populateFilterOptions("governorateFilter", governorates);
+        populateFilterOptions("orgTypeFilter", orgTypes);
+    }
+
+    function getUniqueValues(columnIndex) {
+        var uniqueValues = [];
+        var table = document.getElementById("organizationTable");
+        for (var i = 1; i < table.rows.length; i++) { // Start from 1 to skip header row
+            var cellValue = table.rows[i].cells[columnIndex].textContent.trim();
+            if (!uniqueValues.includes(cellValue)) {
+                uniqueValues.push(cellValue);
+            }
+        }
+        return uniqueValues;
+    }
+
+    function populateFilterOptions(filterId, options) {
+        var select = document.getElementById(filterId);
+        options.forEach(function(option) {
+            var optionElement = document.createElement("option");
+            optionElement.value = option;
+            optionElement.textContent = option;
+            select.appendChild(optionElement);
+        });
+    }
+
+    function applyFilters() {
+    var areaFilter = document.getElementById("areaFilter").value;
+    var governorateFilter = document.getElementById("governorateFilter").value;
+    var orgTypeFilter = document.getElementById("orgTypeFilter").value;
+
+    console.log("Area Filter:", areaFilter);
+    console.log("Governorate Filter:", governorateFilter);
+    console.log("Org Type Filter:", orgTypeFilter);
+
+    var table = document.getElementById("organizationTable");
+    var tbody = table.getElementsByTagName("tbody")[0];
+    var rows = tbody.getElementsByTagName("tr");
+
+    // Loop through all table rows
+    for (var i = 0; i < rows.length; i++) {
+        var row = rows[i];
+        var area = row.cells[1].textContent.trim();
+        var governorate = row.cells[2].textContent.trim();
+        var orgType = row.cells[3].textContent.trim();
+
+        // Check if the row matches the filters
+        var isVisible = true;
+        if (areaFilter && areaFilter !== "All" && area !== areaFilter) {
+            isVisible = false;
+        }
+        if (governorateFilter && governorateFilter !== "All" && governorate !== governorateFilter) {
+            isVisible = false;
+        }
+        if (orgTypeFilter && orgTypeFilter !== "All" && orgType !== orgTypeFilter) {
+            isVisible = false;
+        }
+
+        // Toggle row visibility
+        if (isVisible) {
+            row.style.display = "";
+        } else {
+            row.style.display = "none";
+        }
+    }
+}
+
+
+</script>
+
+
+
+    
+    <!-- footer_start  -->
+    <footer class="footer">
+        <div class="footer_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-md-6 col-lg-4 ">
+                        <div class="footer_widget">
+                            
+                </div>
+            </div>
+        </div>
+        <div class="copy-right_text">
+            <div class="container">
+                <div class="row">
+                    <div class="bordered_1px "></div>
+                    <div class="col-xl-12">
+                        <p class="copy_right text-center">
+                            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This website is made with <i class="ti-heart" aria-hidden="true"></i> by team Hossam Hassan</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- link that opens popup -->
+
+    <!-- JS here -->
+    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/ajax-form.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/scrollIt.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/nice-select.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/gijgo.min.js"></script>
+    <!--contact js-->
+    <script src="js/contact.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/mail-script.js"></script>
+
+    <script src="js/main.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAq6sEj0YrcX9iP5pNUqZFG0RiXEf9vTG8&callback=initMaps" async defer></script>
+
+</body>
+
+</html>

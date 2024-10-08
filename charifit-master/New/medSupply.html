@@ -1,0 +1,656 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Charifit</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/gijgo.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/slicknav.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+
+        <header>
+            <div class="header-area ">
+                <div class="header-top_area">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-xl-6 col-md-12 col-lg-8">
+                            </div>
+                            <div class="col-xl-6 col-md-6 col-lg-4">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="sticky-header" class="main-header-area">
+                    <div class="container-fluid">
+                        <div class="row align-items-center">
+                            <div class="col-xl-3 col-lg-3">
+                                <div class="logo">
+                                    <a href="index.html">
+                                        <img src="img/logo.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-xl-9 col-lg-9">
+                                <div class="main-menu">
+                                    <nav>
+                                        <ul id="navigation">
+                                            <li><a href="index.html">home</a></li>
+                                            <li><a href="About.html">About</a></li>
+                                            <li><a>Donate</a></li>
+                                            <li><a href="#">Volunteer <i class="ti-angle-down"></i></a>
+                                                <ul class="submenu">
+                                                    <li><a href="teacher.html">Teacher</a></li>
+                                                    <li><a href="doctor.html">Doctor</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="settings.html">Settings</a></li>
+                                        </ul>
+                                    </nav>
+                                    <div class="Appointment">
+                                        <div class="book_btn d-none d-lg-block">
+                                            <a data-scroll-nav='1' href="#">Register</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="mobile_menu d-block d-lg-none"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+    <!-- bradcam_area_start  -->
+    <div class="bradcam_area breadcam_bg overlay d-flex align-items-center justify-content-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="bradcam_text text-center">
+                        <h3>Medical Supply Requests</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- bradcam_area_end  -->
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+       
+       body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .filters {
+            margin-bottom: 20px;
+        }
+
+        .filters select {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        #supplyList .post {
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+       
+
+        #supplyList .post p {
+            margin: 10px 0;
+        }
+
+        #supplyList .post details {
+            margin-top: 10px;
+        }
+
+        #supplyList .post img {
+            max-width: 100px;
+            max-height: 100px;
+            margin-top: 10px;
+        }
+
+        #supplyList .post .quantity-input {
+            width: 100px;
+            padding: 5px;
+            margin-top: 10px;
+
+        }
+
+        #supplyList .post h3 {
+            margin-top: 0;
+            color: black; /* Ensure title color is black */
+        }
+
+        #supplyList .post button {
+            padding: 8px 16px;
+            background-color:  #3CC78F;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        #supplyList .post button:hover {
+            background-color:  #3CC78F;
+        }
+
+        #supplyList .post p[id^="donationMessage_"] {
+            margin-top: 10px;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+    <!-- popular_causes_area_start  -->
+    <div class="container">
+        <div class="filters">
+            <select id="filterType">
+                <option value="all">All Types</option>
+                <option value="medication">Medication</option>
+                <option value="equipment">Equipment</option>
+                <option value="devices">Devices</option>
+            </select>
+            <select id="filterMedication" style="display: none;">
+                <option value="all">All Medications</option>
+                <option value="painkiller">Painkiller</option>
+                <option value="antibiotic">Antibiotic</option>
+                <option value="diabetes">Diabetes</option>
+            </select>
+        </div>
+        <div id="supplyList">
+            <div class="post medication" data-type="medication" data-medication="diabetes">
+                <h3> Medication</h3>
+                <p>Insulin.</p>
+                <p>Contact: Nadeen Mohamed (nadeen@example.com)</p>
+                <td><details> 
+                    <summary style="color:  #3CC78F;">View Details</summary> 
+                    <div> 
+                        
+                        <div> Use: cure diabetes </div> 
+                        <div> Quantity: 40</div> 
+                        <div> Image: 
+                            <style>
+                                
+                                img {
+                                    width: 100px; 
+                                    height: 50px; 
+                                }
+                            </style>
+                            <div class="container">
+                                <img src="ins.jpg" alt="Description">
+
+                            </div>
+                            
+                        </div>
+                        <div>
+                            <input type="number" id="insulinQuantityInput" placeholder="Enter Quantity" min="1" max="40" class="quantity-input">
+                            <button onclick="donate('insulin', 40)" style="color: white;">Donate</button>
+                            <p id="donationMessage_insulin" style="display:none;"></p>
+                        </div>
+                        
+                    </div> 
+            </div>
+            <div class="post equipment" data-type="equipment">
+                <h3> Equipment</h3>
+                <p>hospital beds.</p>
+                <p>Contact: Jana Azmy (jana@example.com)</p>
+                <td><details> 
+                    <summary style="color:  #3CC78F;">View Details</summary> 
+                    <div> 
+                         
+                        <div> Use: For patients to rest </div> 
+                        <div> Quantity: 1000</div> 
+                        <div> Image:
+                            <style>
+                                
+                                img {
+                                    width: 100px; 
+                                    height: 50px; 
+                                }
+                            </style>
+                            <div class="container">
+                                <img src="bed.jpeg" alt="Description">
+
+                            </div> 
+                        </div>
+                              <div>
+                                <input type="number" id="hospitalbedsQuantityInput" placeholder="Enter Quantity" min="1" max="1000" class="quantity-input">
+                                <button onclick="donate('hospital beds', 1000)" style="color: white;">Donate</button>
+                                <p id="donationMessage_hospitalBeds" style="display:none;"></p>
+
+
+                              </div>
+                            
+                    </div> 
+            </div>
+            <div class="post devices" data-type="devices">
+                <h3> Devices</h3>
+                <p>Blood pressure monitor.</p>
+                <p>Contact: Rana Ahmed (rana@example.com)</p>
+                <td><details> 
+                    <summary style="color:  #3CC78F;">View Details</summary> 
+                    <div> 
+                        <div> Device Type: Syphgmomanometer</div> 
+                        <div> Use: monitor patient blood pressure </div> 
+                        <div> Quantity: 50</div> 
+                        <div> Image:
+                            <style>
+                                
+                                img {
+                                    width: 100px; 
+                                    height: 50px; 
+                                }
+                            </style>
+                            <div class="container">
+                                <img src="blood.jpeg" alt="Description">
+
+                            </div> 
+                        </div>
+                        <div>
+                                <input type="number" id="bloodpressuremonitorQuantityInput" placeholder="Enter Quantity" min="1" max="50" class="quantity-input">
+                                <button onclick="donate('blood pressure monitor', 50)" style="color: white;">Donate</button>
+                                <p id="donationMessage_bloodPressureMonitor" style="display:none;"></p>
+                        </div>
+                            
+                    </div> 
+            </div>
+            <div class="post equipment" data-type="equipment">
+                <h3> Equipment</h3>
+                <p>surgical gloves </p>
+                <p>Contact: Karim Mina (karim@example.com)</p>
+                <td><details> 
+                    <summary style="color:  #3CC78F;">View Details</summary>  
+                    <div> 
+                        
+                        <div> Use: To be sterile during surgery</div> 
+                        <div> Quantity: 200</div> 
+                        <div> Image:  <style>
+                            
+                            img {
+                                width: 100px; 
+                                height: 50px; 
+                            }
+                        </style>
+                        <div class="container">
+                            <img src="glove.jpeg" alt="Description">
+
+                        </div>
+                    </div>
+                    <div>
+                            <input type="number" id="surgicalglovesQuantityInput" placeholder="Enter Quantity" min="1" max="200" class="quantity-input">
+                            <button onclick="donate('surgical gloves', 200)" style="color: white;">Donate</button>
+                            <p id="donationMessage_surgicalGloves" style="display:none;"></p>
+                    </div>
+                        
+                    </div> 
+            </div>
+            <div class="post medication" data-type="medication" data-medication="antibiotic">
+                <h3> Medication</h3>
+                <p>Amoxicillin.</p>
+                <p>Contact: Omar Farhoud  (Omar@example.com)</p>
+                <td><details> 
+                    <summary style="color:  #3CC78F;">View Details</summary> 
+                    <div> 
+                        
+                        <div> Use: fight infections </div> 
+                        <div> Quantity: 300</div> 
+                        <div> Image:
+                            <style>
+                                
+                                img {
+                                    width: 100px; 
+                                    height: 50px; 
+                                }
+                            </style>
+                            <div class="container">
+                                <img src="anti.jpeg" alt="Description">
+
+                            </div> 
+                        </div>
+                        <div> 
+                                <input type="number" id="amoxicillinQuantityInput" placeholder="Enter Quantity" min="1" max="300" class="quantity-input">
+                                <button onclick="donate('amoxicillin', 300)" style="color: white;">Donate</button>
+                                <p id="donationMessage_amoxicillin" style="display:none;"></p>
+                        </div>
+                            
+                        
+                    </div> 
+            </div>
+            <div class="post devices" data-type="devices">
+                <h3> Devices</h3>
+                <p>Ventilators.</p>
+                <p>Contact: Mohamed Bishbishy (Mohamed@example.com)</p>
+                <td><details> 
+                    <summary style="color:  #3CC78F;">View Details</summary> 
+                    <div> 
+                        <div> Device Type:Ventilator</div> 
+                        <div> Use:Delivers oxygen for patients </div> 
+                        <div> Quantity:700</div> 
+                        <div> Image:  <style>
+                            
+                            img {
+                                width: 100px; 
+                                height: 50px; 
+                            }
+                        </style>
+                        <div class="container">
+                            <img src="vent.jpg" alt="Description">
+
+                        </div>
+                    </div>
+                    <div>
+                            <input type="number" id="ventilatorQuantityInput" placeholder="Enter Quantity" min="1" max="700" class="quantity-input">
+                            <button onclick="donate('ventilator', 700)" style="color: white;">Donate</button>
+                            <p id="donationMessage_ventilators" style="display:none;"></p>
+                    </div>
+                    </div> 
+            </div>
+            <div class="post medication" data-type="medication" data-medication="painkiller">
+                <h3>Medication</h3>
+                <p>Panadol.</p>
+                <p>Contact: Mohamed Amr (Mohamed@example.com)</p>
+                <td><details> 
+                    <summary style="color:  #3CC78F;">View Details</summary> 
+                    <div> 
+                        
+                        <div> Use: painkiller </div> 
+                        <div> Quantity: 2500</div> 
+                        <div> Image: <style>
+                            
+                            img {
+                                width: 150px; 
+                                height: 80px;
+                            }
+                        </style>
+                        <div class="container">
+                            <img src="panadol.jpeg" alt="Description">
+
+                        </div> 
+                    </div>
+                    <div>
+                            <input type="number" id="panadolQuantityInput" placeholder="Enter Quantity" min="1" max="2500" class="quantity-input">
+                            <button onclick="donate('panadol', 2500)" style="color: white;">Donate</button>
+                            <p id="donationMessage_panadol" style="display:none;"></p>
+                    </div>
+                        
+                    </div> 
+            </div>
+            
+
+        </div>
+    </div>
+    
+    <!-- popular_causes_area_end  -->
+
+
+    <div data-scroll-index='1' class="make_donation_area section_padding">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="section_title text-center mb-55">
+                        <h3><span>Make a Donation</span></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <form action="#" class="donation_form">
+                        <div class="row align-items-center">
+                            <div class="col-md-4">
+                                <div class="single_amount">
+                                    <div class="input_field">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                              <span class="input-group-text" id="basic-addon1">$</span>
+                                            </div>
+                                            <input type="text" class="form-control" placeholder="40,200" aria-label="Username" aria-describedby="basic-addon1">
+                                          </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="single_amount">
+                                   <div class="fixed_donat d-flex align-items-center justify-content-between">
+                                       <div class="select_prise">
+                                           <h4>Select Amount:</h4>
+                                       </div>
+                                        <div class="single_doonate"> 
+                                            <input type="radio" id="blns_1" name="radio-group" checked>
+                                            <label for="blns_1">10</label>
+                                        </div>
+                                        <div class="single_doonate"> 
+                                            <input type="radio" id="blns_2" name="radio-group" checked>
+                                            <label for="blns_2">30</label>
+                                        </div>
+                                        <div class="single_doonate"> 
+                                            <input type="radio" id="Other" name="radio-group" checked>
+                                            <label for="Other">Other</label>
+                                        </div>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="donate_now_btn text-center">
+                        <a href="#" class="boxed-btn4">Donate Now</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- footer_start  -->
+    <footer class="footer">
+        <div class="footer_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-md-6 col-lg-4 ">
+                        <div class="footer_widget">
+                            <div class="footer_logo">
+                                <a href="#">
+                                    <img src="img/footer_logo.png" alt="">
+                                </a>
+                            </div>
+                            <p class="address_text">Lorem ipsum dolor sit amet, <br> consectetur adipiscing elit, sed do <br> eiusmod tempor incididunt ut labore.
+                            </p>
+                            <div class="socail_links">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <i class="ti-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="ti-twitter-alt"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-dribbble"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-6 col-lg-2">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                Services
+                            </h3>
+                            <ul class="links">
+                                <li><a href="#">Donate</a></li>
+                                <li><a href="#">Sponsor</a></li>
+                                <li><a href="#">Fundraise</a></li>
+                                <li><a href="#">Volunteer</a></li>
+                                <li><a href="#">Partner</a></li>
+                                <li><a href="#">Jobs</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-lg-3">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                Contacts
+                            </h3>
+                            <div class="contacts">
+                                <p>+2(305) 587-3407 <br>
+                                    info@loveuscharity.com <br>
+                                    Flat 20, Reynolds Neck, North
+                                    Helenaville, FV77 8WS
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-lg-3">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                Top News
+                            </h3>
+                            <ul class="news_links">
+                                <li>
+                                    <div class="thumb">
+                                        <a href="#">
+                                            <img src="img/news/news_1.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <a href="#">
+                                            <h4>School for African 
+                                                Childrens</h4>
+                                        </a>
+                                        <span>Jun 12, 2019</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="thumb">
+                                        <a href="#">
+                                            <img src="img/news/news_2.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <a href="#">
+                                            <h4>School for African 
+                                                Childrens</h4>
+                                        </a>
+                                        <span>Jun 12, 2019</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copy-right_text">
+            <div class="container">
+                <div class="row">
+                    <div class="bordered_1px "></div>
+                    <div class="col-xl-12">
+                        <p class="copy_right text-center">
+                            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="ti-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer_end  -->
+
+    <!-- link that opens popup -->
+
+    <!-- JS here -->
+    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/ajax-form.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/scrollIt.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/nice-select.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/gijgo.min.js"></script>
+    <!--contact js-->
+    <script src="js/contact.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/mail-script.js"></script>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

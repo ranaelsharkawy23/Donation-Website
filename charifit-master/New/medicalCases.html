@@ -1,0 +1,402 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+    <style>
+        #medical-cases {
+          margin-top: 50px;
+          width: 100%;
+          border-collapse: collapse;
+          font-family: Arial, sans-serif;
+        }
+        #medical-cases th, #medical-cases td {
+          border: 1px solid #dddddd;
+          padding: 8px;
+          text-align: left;
+        }
+        #medical-cases th {
+          background-color: #3CC78F;
+          color: white
+        }
+        
+        #medical-cases tr:hover {
+          background-color: #f2f2f2;
+        }
+        .details-content {
+          display: none;
+          padding: 10px;
+        }
+        .details-content div {
+          margin-bottom: 5px;
+        }
+        .details-summary {
+          cursor: pointer;
+          font-weight: bold;
+        }
+        .donate-button {
+          background-color: #3CC78F;
+          border: none;
+          color: white;
+          padding: 8px 16px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 14px;
+          margin: 4px 2px;
+          cursor: pointer;
+          border-radius: 4px;
+        }
+        .donate-button:hover {
+          background-color: #5aa85e;
+        }
+      </style>
+      
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Charifit</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/gijgo.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/slicknav.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+
+    <!-- header-start -->
+    <header>
+        <div class="header-area ">
+            <div class="header-top_area">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-6 col-md-12 col-lg-8">
+                        </div>
+                        <div class="col-xl-6 col-md-6 col-lg-4">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-xl-3 col-lg-3">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img src="img/logo.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-9 col-lg-9">
+                            <div class="main-menu">
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><a href="index.html">home</a></li>
+                                        <li><a href="About.html">About</a></li>
+                                        <li><a>Donate</a></li>
+                                        <li><a href="#">Volunteer <i class="ti-angle-down"></i></a>
+                                            <ul class="submenu">
+                                                <li><a href="teacher.html">Teacher</a></li>
+                                                <li><a href="doctor.html">Doctor</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="settings.html">Settings</a></li>
+                                    </ul>
+                                </nav>
+                                <div class="Appointment">
+                                    <div class="book_btn d-none d-lg-block">
+                                        <a data-scroll-nav='1' href="#">Register</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+    
+
+    <!-- bradcam_area_start  -->
+    <div class="bradcam_area breadcam_bg overlay d-flex align-items-center justify-content-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="bradcam_text text-center">
+                        <h3>Medical Cases</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- bradcam_area_end  -->
+    <table id="medical-cases">
+        <thead>
+          <tr>
+            <th>Patient Name</th>
+            <th>Medical Specialist</th>
+            <th>Organization</th>
+            <th>Area</th>
+            <th>Governate</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Nadeen Hassan</td>
+            <td class="specialty">Cardiologist</td>
+            <td class="organization">Golf Hospital</td>
+            <td class="area">Masr El Gedida</td>
+            <td class="governate">Cairo</td>
+            <td>
+              <details> 
+                <summary>View Details</summary><br> 
+                <div> 
+                  <div> Name: Nadeen Hassan</div> 
+                  <div> Age: 72 </div> 
+                  <div> Gender: Female</div> 
+                  <div> Weight: 102 KG</div>
+                  <div> Address: 123 Main St. </div> 
+                  <div> Organization Name: Golf Hospital</div>
+                  <div> Medical Speciality: Cardiologist</div>
+                  <div> Case Description: Patient complains of chest pain.</div>
+                  <div> Location: <div id="map1" class="map" ></div> </div>
+                </div>
+              </details> 
+            </td>
+          <td><button class="donate-button" onclick="showAlert()">Contribute</button></td>
+          </tr>
+          <tr>
+            <td>Rana Ahmed</td>
+            <td class="specialty">Neurologist</td>
+            <td class="organization">Cleopatra Hospital</td>
+            <td class="area">New Cairo</td>
+            <td class="governate">Giza</td>
+            <td><details> 
+              <summary>View Details</summary><br> 
+              <div> 
+                <div> Name: Rana Ahmed</div> 
+                <div> Age: 14 </div> 
+                <div> Gender: Female</div> 
+                <div> Weight: 48 KG</div>
+                <div> Address: 21 Oak St. </div> 
+                <div> Organization Name: Cleopatra Hospital</div>
+                <div> Medical Speciality: Neurologist</div>
+                <div> Case Description: Patient complains of constant migraines.</div>
+                <div> Location: <div id="map2" class="map"></div> </div>
+              </div> 
+          </details> </td>
+          <td><button class="donate-button" onclick="showAlert()">Contribute</button></td>
+          </tr>
+    
+          <tr>
+            <td>Jana Azmy</td>
+            <td class="specialty">Urologist</td>
+            <td class="organization">Hayah Hospital</td>
+            <td class="area">Kafr Abdo</td>
+            <td class="governate">Alexandria</td>
+            <td><details> 
+              <summary>View Details</summary><br> 
+              <div> 
+                <div> Name: Jana Azmy</div> 
+                <div> Age: 33 </div> 
+                <div> Gender: Female</div> 
+                <div> Weight: 66 KG</div>
+                <div> Address: 123 Pine St. </div> 
+                <div> Organization Name: Hayah Hospital</div>
+                <div> Medical Speciality: Urologist</div>
+                <div> Case Description: Patient complains of kidney pain.</div>
+                <div> Location: <div id="map3" class="map" ></div> </div>
+              </div> 
+          </details> </td>
+          <td><button class="donate-button" onclick="showAlert()" >Contribute</button></td>
+          </tr>
+    
+        </tbody>
+      </table>
+
+    
+
+
+
+    <!-- footer_start  -->
+    <footer class="footer">
+        <div class="footer_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-md-6 col-lg-4 ">
+                        <div class="footer_widget">
+                            <div class="footer_logo">
+                                <a href="#">
+                                    <img src="img/footer_logo.png" alt="">
+                                </a>
+                            </div>
+                            <p class="address_text">Lorem ipsum dolor sit amet, <br> consectetur adipiscing elit, sed do <br> eiusmod tempor incididunt ut labore.
+                            </p>
+                            <div class="socail_links">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <i class="ti-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="ti-twitter-alt"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-dribbble"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-6 col-lg-2">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                Services
+                            </h3>
+                            <ul class="links">
+                                <li><a href="#">Donate</a></li>
+                                <li><a href="#">Sponsor</a></li>
+                                <li><a href="#">Fundraise</a></li>
+                                <li><a href="#">Volunteer</a></li>
+                                <li><a href="#">Partner</a></li>
+                                <li><a href="#">Jobs</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-lg-3">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                Contacts
+                            </h3>
+                            <div class="contacts">
+                                <p>+2(305) 587-3407 <br>
+                                    info@loveuscharity.com <br>
+                                    Flat 20, Reynolds Neck, North
+                                    Helenaville, FV77 8WS
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-lg-3">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                Top News
+                            </h3>
+                            <ul class="news_links">
+                                <li>
+                                    <div class="thumb">
+                                        <a href="#">
+                                            <img src="img/news/news_1.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <a href="#">
+                                            <h4>School for African 
+                                                Childrens</h4>
+                                        </a>
+                                        <span>Jun 12, 2019</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="thumb">
+                                        <a href="#">
+                                            <img src="img/news/news_2.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <a href="#">
+                                            <h4>School for African 
+                                                Childrens</h4>
+                                        </a>
+                                        <span>Jun 12, 2019</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copy-right_text">
+            <div class="container">
+                <div class="row">
+                    <div class="bordered_1px "></div>
+                    <div class="col-xl-12">
+                        <p class="copy_right text-center">
+                            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="ti-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer_end  -->
+
+    <!-- link that opens popup -->
+
+    <!-- JS here -->
+    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/ajax-form.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/scrollIt.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/nice-select.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/gijgo.min.js"></script>
+    <!--contact js-->
+    <script src="js/contact.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/mail-script.js"></script>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

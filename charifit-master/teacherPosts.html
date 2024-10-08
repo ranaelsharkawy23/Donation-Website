@@ -1,0 +1,419 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+    <link rel="stylesheet" href="teachPost.css">
+    <style>
+      
+        form {
+   margin-top: 50px; 
+ }
+ .arrow-button {
+ background-color: #3cc78f;
+ border: none;
+ color: white;
+ padding: 5px 10px;
+ text-align: center;
+ text-decoration: none;
+ display: inline-block;
+ font-size: 20px;
+ margin: 8px 4px;
+ cursor: pointer;
+ border-radius: 50%;
+ width: 40px;
+ height: 40px;
+}
+
+/* Style the arrow */
+.arrow-button::after {
+ content: '\2039'; /* Unicode for left-pointing arrow */
+}
+ 
+ 
+     </style>
+     <script>
+       function goBack() {
+         // Use the window.history object to navigate back
+         window.history.back();
+       }
+       </script>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Charifit</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/gijgo.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/slicknav.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+
+        <header>
+            <div class="header-area ">
+                <div class="header-top_area">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-xl-6 col-md-12 col-lg-8">
+                            </div>
+                            <div class="col-xl-6 col-md-6 col-lg-4">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="sticky-header" class="main-header-area">
+                    <div class="container-fluid">
+                        <div class="row align-items-center">
+                            <div class="col-xl-3 col-lg-3">
+                                <div class="logo">
+                                    <a>
+                                        <img src="img/logo.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-xl-9 col-lg-9">
+                                <div class="main-menu">
+                                    <nav>
+                                        <ul id="navigation">
+                                            <li><a href="donor2.html">home</a></li>
+                                            <li><a href="#">Volunteer <i class="ti-angle-down"></i></a>
+                                                <ul class="submenu">
+                                                    <li><a href="teacher.html">Teacher</a></li>
+                                                    <li><a href="clinic2.html">Doctor</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                    <div class="Appointment">
+                                        <div class="book_btn d-none d-lg-block">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="mobile_menu d-block d-lg-none"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+    <!-- bradcam_area_start  -->
+    <div class="bradcam_area breadcam_bg overlay d-flex align-items-center justify-content-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="bradcam_text text-center">
+                        <h3>Teaching Posts</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- bradcam_area_end  -->
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+       
+       body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .filters {
+            margin-bottom: 20px;
+        }
+
+        .filters select {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        #TeachPosts .post {
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+       
+
+        #TeachPosts .post p {
+            margin: 10px 0;
+        }
+
+        #TeachPosts .post details {
+            margin-top: 10px;
+        }
+
+        #TeachPosts .post img {
+            max-width: 100px;
+            max-height: 100px;
+            margin-top: 10px;
+        }
+
+        #TeachPosts .post .quantity-input {
+            width: 100px;
+            padding: 5px;
+            margin-top: 10px;
+
+        }
+
+        #TeachPosts .post h3 {
+            margin-top: 0;
+            color: black; /* Ensure title color is black */
+        }
+
+        #TeachPosts .post button {
+            padding: 8px 16px;
+            background-color:  #3CC78F;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        #TeachPosts .post button:hover {
+            background-color:  #3CC78F;
+        }
+
+        #TeachPosts .post p[id^="donationMessage_"] {
+            margin-top: 10px;
+            font-style: italic;
+        }
+        
+    </style>
+</head>
+
+    <!-- popular_causes_area_start  -->
+    <div class="container">
+        <div class="filters">
+            <select id="filterSubject" onchange="filterTeachingPosts()">
+                <option value="all">All Subjects</option>
+                <option value="science">Science</option>
+                <option value="mathematics">Mathematics</option>
+                <option value="English">English</option>
+            </select>
+            <select id="filterArea" onchange="filterTeachingPosts()">
+                <option value="all">All Areas</option>
+                <option value="Masr El Gedida">Masr El Gedida</option>
+                <option value="Zayed">Zayed</option>
+                <option value="Smouha">Smouha</option>
+            </select>
+            <select id="filterGovernate" onchange="filterTeachingPosts()">
+                <option value="all">All Governates</option>
+                <option value="Cairo">Cairo</option>
+                <option value="Giza">Giza</option>
+                <option value="Alexandria">Alexandria</option>
+            </select>
+        </div>
+        <div id="TeachPosts">
+            <div class="post science" data-subject="science" data-area="masr el gedida" data-governate="cairo">
+                <h3> Science Teacher at Leader School</h3>
+                <p>2nd Grade Students</p>
+                <p>Contact: Nadeen Mohamed (nadeen@example.com)</p>
+                <div>
+                    
+                    <button onclick="displayMessage(this.closest('.post'))" style="color: white;">Contribute</button> 
+                </div>
+                <td><details> 
+                    <summary style="color:  #3CC78F;">View Details</summary> 
+                    <div> 
+                        
+                        <div> Number of students: 20 </div> 
+                        <div> Address: 123 Main St. Masr el Gedida , Cairo</div> 
+                        <div> Subject:  Science</div>
+                        <div> Location :  <div id="map1" class="map" ></div> </div>
+                    
+                        
+                    </div> 
+            </div>
+            <div class="post mathematics" data-subject="mathematics" data-area="zayed" data-governate="giza">
+                <h3> Mathematics Teacher at ABC School</h3>
+                <p> 4th Grade Students</p>
+                <p>Contact: Jana Azmy (jana@example.com)</p>
+                <div>
+                    
+                    <button onclick="displayMessage(this.closest('.post'))" style="color: white;">Contribute</button>
+                    
+                </div>
+                <td><details> 
+                    <summary style="color:  #3CC78F;">View Details</summary> 
+                    <div> 
+                        
+                        <div> Number of students: 40 </div> 
+                        <div> Address: 123 Oak St. Zayed , Giza</div> 
+                        <div> Subject: Mathematics</div>
+                        <div> Location :  <div id="map2" class="map" ></div> </div>
+                    
+                        
+                    </div> 
+            </div>
+            <div class="post english" data-subject="english" data-area="smouha" data-governate="alexandria">
+                <h3>English Teacher at International School</h3>
+                <p>Kintergarden Students</p>
+                <p>Contact: Rana Ahmed (rana@example.com)</p>
+                <div>
+                    
+                    <button onclick="displayMessage(this.closest('.post'))" style="color: white;">Contribute</button>
+                    
+                </div>
+                <td><details> 
+                    <summary style="color:  #3CC78F;">View Details</summary> 
+                    <div> 
+                        
+                        <div> Number of students: 15 </div> 
+                        <div> Address: 123 Pine St. Smouha , Alexandria</div> 
+                        <div> Subject: English</div>
+                        <div> Location :  <div id="map3" class="map" ></div> </div>
+                    
+                        
+                    </div> 
+            </div>
+            <div class="post science" data-subject="science" data-area="smouha" data-governate="alexandria">
+                <h3> Science Teacher at International School</h3>
+                <p>5th Grade Students</p>
+                <p>Contact: Karim Mina (karim@example.com)</p>
+                <div>
+                    
+                    <button onclick="displayMessage(this.closest('.post'))" style="color: white;">Contribute</button>
+                    
+                </div>
+                <td><details> 
+                    <summary style="color:  #3CC78F;">View Details</summary> 
+                    <div> 
+                        
+                        <div> Number of students: 35 </div> 
+                        <div> Address: 123 Main St. Smouha , Alexandria</div> 
+                        <div> Subject:  Science</div>
+                        <div> Location :  <div id="map4" class="map" ></div> </div>
+                    
+                        
+                    </div> 
+            </div>
+            <div class="post english" data-subject="english" data-area="masr el gedida" data-governate="cairo">
+                <h3> English Teacher at Leader School</h3>
+                <p>3rd Grade Students</p>
+                <p>Contact: Omar Farhoud (omar@example.com)</p>
+                <div>
+                    
+                    <button onclick="displayMessage(this.closest('.post'))" style="color: white;">Contribute</button>
+                    
+                </div>
+                <td><details> 
+                    <summary style="color:  #3CC78F;">View Details</summary> 
+                    <div> 
+                        
+                        <div> Number of students: 45 </div> 
+                        <div> Address: 123 Lavender St. Masr el Gedida , Cairo</div> 
+                        <div> Subject: English</div>
+                        <div> Location :  <div id="map5" class="map" ></div> </div>
+                    
+                        
+                    </div> 
+            </div>
+            
+            
+
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-md-6 col-lg-4 ">
+                        <div class="footer_widget">
+                            
+                </div>
+            </div>
+        </div>
+        <div class="copy-right_text">
+            <div class="container">
+                <div class="row">
+                    <div class="bordered_1px "></div>
+                    <div class="col-xl-12">
+                        <p class="copy_right text-center">
+                            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This website is made with <i class="ti-heart" aria-hidden="true"></i> by team Hossam Hassan</a>
+    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+<!-- JS here -->
+<script src="js/vendor/modernizr-3.5.0.min.js"></script>
+<script src="js/vendor/jquery-1.12.4.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/isotope.pkgd.min.js"></script>
+<script src="js/ajax-form.js"></script>
+<script src="js/waypoints.min.js"></script>
+<script src="js/jquery.counterup.min.js"></script>
+<script src="js/imagesloaded.pkgd.min.js"></script>
+<script src="js/scrollIt.js"></script>
+<script src="js/jquery.scrollUp.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/nice-select.min.js"></script>
+<script src="js/jquery.slicknav.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/gijgo.min.js"></script>
+<script src="js/main.js"></script>
+<script src="teachPosts.js"></script>
+<!--contact js-->
+<script src="js/contact.js"></script>
+<script src="js/jquery.ajaxchimp.min.js"></script>
+<script src="js/jquery.form.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/mail-script.js"></script>
+<script src="teachPosts.js"></script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAq6sEj0YrcX9iP5pNUqZFG0RiXEf9vTG8&callback=initMaps" async defer></script>
+</body>
+
+
+</html>

@@ -1,0 +1,75 @@
+#map {
+    height: 300px; 
+    width: 60%;   
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 50px;
+    color: #333;
+}
+
+form {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="password"],
+select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 16px; /* Increase font size */
+}
+
+/* Additional styles for select inputs */
+select {
+    appearance: none; /* Remove default appearance */
+    -webkit-appearance: none; /* For older versions of Chrome/Safari */
+    background-image: url('data:image/svg+xml;utf8,<svg fill="#333" width="12" height="12" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5H7z"/></svg>'); /* Add custom arrow icon */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px 12px;
+    padding-right: 30px; /* Adjust padding to accommodate the arrow icon */
+}
+
+/* Styling for buttons */
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #3CC78F; /* Button color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2EA572; /* Darker color on hover */
+}
+
+input[type="file"] {
+    margin: 20px 0;
+}

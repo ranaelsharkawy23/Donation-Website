@@ -1,0 +1,357 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+
+<style>
+    form {
+margin-top: 50px; 
+}
+.arrow-button {
+background-color: #3cc78f;
+border: none;
+color: white;
+padding: 5px 10px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 20px;
+margin: 8px 4px;
+cursor: pointer;
+border-radius: 50%;
+width: 40px;
+height: 40px;
+}
+
+/* Style the arrow */
+.arrow-button::after {
+content: '\2039'; /* Unicode for left-pointing arrow */
+}
+
+
+ </style>
+ <script>
+   function goBack() {
+     // Use the window.history object to navigate back
+     window.history.back();
+   }
+   </script>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Charifit</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/gijgo.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/slicknav.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+
+        <header>
+            <div class="header-area ">
+                <div class="header-top_area">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-xl-6 col-md-12 col-lg-8">
+                            </div>
+                            <div class="col-xl-6 col-md-6 col-lg-4">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="sticky-header" class="main-header-area">
+                    <div class="container-fluid">
+                        <div class="row align-items-center">
+                            <div class="col-xl-3 col-lg-3">
+                                <div class="logo">
+                                    <a>
+                                        <img src="img/logo.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-xl-9 col-lg-9">
+                                <div class="main-menu">
+                                    <nav>
+                                        <ul id="navigation">
+                                            <li><a href="donor2.html">home</a></li>
+                                            <li><a href="#">Volunteer <i class="ti-angle-down"></i></a>
+                                                <ul class="submenu">
+                                                    <li><a href="teacher.html">Teacher</a></li>
+                                                    <li><a href="clinic2.html">Doctor</a></li>
+                                                </ul>
+                                            </li>
+                                            </ul>
+                                    </nav>
+                                    <div class="Appointment">
+                                        <div class="book_btn d-none d-lg-block">
+                                          
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="mobile_menu d-block d-lg-none"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+    <!-- bradcam_area_start  -->
+    <div class="bradcam_area breadcam_bg overlay d-flex align-items-center justify-content-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="bradcam_text text-center">
+                        <h3>All Requests</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- bradcam_area_end  -->
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+       
+       body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .filters {
+            margin-bottom: 20px;
+        }
+
+        .filters select {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        #supplyList .post {
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+       
+
+        #supplyList .post p {
+            margin: 10px 0;
+        }
+
+        #supplyList .post details {
+            margin-top: 10px;
+        }
+
+        #supplyList .post img {
+            max-width: 100px;
+            max-height: 100px;
+            margin-top: 10px;
+        }
+
+        #supplyList .post .quantity-input {
+            width: 100px;
+            padding: 5px;
+            margin-top: 10px;
+
+        }
+
+        #supplyList .post h3 {
+            margin-top: 0;
+            color: black; /* Ensure title color is black */
+        }
+
+        #supplyList .post button {
+            padding: 8px 16px;
+            background-color:  #3CC78F;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        #supplyList .post button:hover {
+            background-color:  #3CC78F;
+        }
+
+        #supplyList .post p[id^="donationMessage_"] {
+            margin-top: 10px;
+            font-style: italic;
+        }
+    </style>
+</head>
+  <div class="search-container">
+    <input type="text" id="searchInput" onkeyup="searchSupplies() " placeholder="Search for requests names...">
+  </div>
+  
+    
+
+       <!-- popular_causes_area_start  -->
+       <div class="container">
+        <div class="filters">
+          <select id="filterType" onchange="filterSupplies()">
+            <option value="all">All Types</option>
+            <option value="clothes">Clothes</option>
+            <option value="toys">Toys</option>
+            <option value="food">Food</option>
+            <option value="medical">Medical Supplies</option>
+            <option value="school">School Supplies</option>
+            <option value="blood">Blood Donations</option>
+          </select>
+        </div>
+        <div id="supplyList">
+          <div class="post medication" data-type="clothes">
+            <h3>Clothes</h3>
+            <p>requests for clothes</p>
+            <div>
+              <a href="clothes.html" style="color: #3CC78F;">view</a>
+              <p id="donationMessage_insulin" style="display:none;"></p>
+            </div>
+          </div>
+          <div class="post medication" data-type="toys">
+            <h3>Toys</h3>
+            <p>requests for toys</p>
+            <div>
+              <a href="toys.html" style="color: #3CC78F;">view</a>
+              <p id="donationMessage_insulin" style="display:none;"></p>
+            </div>
+          </div>
+          <div class="post medication" data-type="food">
+            <h3>Food</h3>
+            <p>requests for food</p>
+            <div>
+              <a href="food.html" style="color: #3CC78F;">view</a>
+              <p id="donationMessage_insulin" style="display:none;"></p>
+            </div>
+          </div>
+          <div class="post medication" data-type="medical">
+            <h3>Medical Supplies</h3>
+            <p>requests for medical supplies</p>
+            <div>
+              <a href="medSupply.html" style="color: #3CC78F;">view</a>
+              <p id="donationMessage_insulin" style="display:none;"></p>
+            </div>
+          </div>
+          <div class="post medication" data-type="school">
+            <h3>School Supplies</h3>
+            <p>requests for school supplies</p>
+            <div>
+              <a href="schoolsupplies.html" style="color: #3CC78F;">view</a>
+              <p id="donationMessage_insulin" style="display:none;"></p>
+            </div>
+          </div>
+          <div class="post medication" data-type="blood">
+            <h3>Blood Donations</h3>
+            <p>requests for blood donations</p>
+            <div>
+              <a href="bloodDonate.html" style="color: #3CC78F;">view</a>
+              <p id="donationMessage_insulin" style="display:none;"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- popular_causes_area_end  -->
+
+
+ 
+    <footer class="footer">
+        <div class="footer_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-md-6 col-lg-4 ">
+                        <div class="footer_widget">
+                            
+                </div>
+            </div>
+        </div>
+        <div class="copy-right_text">
+            <div class="container">
+                <div class="row">
+                    <div class="bordered_1px "></div>
+                    <div class="col-xl-12">
+                        <p class="copy_right text-center">
+                            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This website is made with <i class="ti-heart" aria-hidden="true"></i> by team Hossam Hassan</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+
+    <!-- link that opens popup -->
+
+    <!-- JS here -->
+    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/ajax-form.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/scrollIt.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/nice-select.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/gijgo.min.js"></script>
+    <!--contact js-->
+    <script src="js/contact.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/mail-script.js"></script>
+    <script src="requests.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

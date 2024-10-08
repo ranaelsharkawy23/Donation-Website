@@ -1,0 +1,603 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<style>
+    form {
+margin-top: 50px; 
+}
+.arrow-button {
+background-color: #3cc78f;
+border: none;
+color: white;
+padding: 5px 10px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 20px;
+margin: 8px 4px;
+cursor: pointer;
+border-radius: 50%;
+width: 40px;
+height: 40px;
+}
+
+/* Style the arrow */
+.arrow-button::after {
+content: '\2039'; /* Unicode for left-pointing arrow */
+}
+
+
+ </style>
+ 
+ <script>
+   function goBack() {
+     // Use the window.history object to navigate back
+     window.history.back();
+   }
+   </script>
+
+    <style>
+        .notification-indicator {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: red; /* Adjust the color as needed */
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 12px;
+    line-height: 15px;
+    margin-left: 5px; /* Adjust the spacing as needed */
+}
+/* Adjustments for account details */
+
+
+
+
+/* Style the delete buttons */
+.delete-detail-btn {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.delete-detail-btn:hover {
+    background-color: #ff5252;
+}
+.account-detail {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Increase spacing between details */
+}
+
+.account-detail label {
+    flex-shrink: 0;
+    font-weight: bold;
+    margin-right: 20px; /* Increase spacing between label and detail */
+    width: 120px; /* Fixed width for labels */
+}
+
+.account-detail span {
+    flex-grow: 1;
+}
+
+/* Style the alter buttons to match the look of the page */
+.alter-detail-btn {
+    background-color: #3CC78F; /* Match the color scheme */
+    color: white; /* Text color */
+    border: none;
+    padding: 8px 12px; /* Padding */
+    border-radius: 4px; /* Border radius */
+    cursor: pointer;
+    font-size: 14px; /* Adjust font size */
+}
+
+.alter-detail-btn:hover {
+    background-color: #5aa85e; /* Darker color on hover */
+}
+
+
+
+
+        #medical-cases {
+          margin-top: 50px;
+          width: 100%;
+          border-collapse: collapse;
+          font-family: Arial, sans-serif;
+        }
+        #medical-cases th, #medical-cases td {
+          border: 1px solid #dddddd;
+          padding: 8px;
+          text-align: left;
+        }
+        #medical-cases th {
+          background-color: #3CC78F;
+          color: white
+        }
+        
+        #medical-cases tr:hover {
+          background-color: #f2f2f2;
+        }
+        .details-content {
+          display: none;
+          padding: 10px;
+        }
+        .details-content div {
+          margin-bottom: 5px;
+        }
+        .details-summary {
+          cursor: pointer;
+          font-weight: bold;
+        }
+        .donate-button {
+          background-color: #3CC78F;
+          border: none;
+          color: white;
+          padding: 8px 16px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 14px;
+          margin: 4px 2px;
+          cursor: pointer;
+          border-radius: 4px;
+        }
+        .donate-button:hover {
+          background-color: #5aa85e;
+        }
+        .fa-bell {
+    font-size: 24px; /* Adjust the size of the bell icon */
+  }
+  
+  .notification-dropdown {
+    display: inline-block; 
+    position: absolute;
+    top: calc(100% + 5px); /* Adjust the position */
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: none;
+    font-size: 16px;
+  }
+ 
+  
+  
+  .notification-dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .notification-dropdown ul li {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .notification-dropdown ul li:hover {
+    background-color: #f0f0f0;
+  }
+  .badge {
+    position: absolute;
+    top: -5px;
+    right: -8px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 3px 6px;
+    font-size: 10px;
+    font-weight: bold;
+  }
+
+
+      </style>
+      
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Charifit</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/gijgo.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/slicknav.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+</head>
+<header>
+    <div class="header-area ">
+        <div class="header-top_area">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-6 col-md-12 col-lg-8">
+                    </div>
+                    <div class="col-xl-6 col-md-6 col-lg-4">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="sticky-header" class="main-header-area">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-xl-3 col-lg-3">
+                        <div class="logo">
+                            <a>
+                                <img src="img/logo.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xl-9 col-lg-9">
+                        <div class="main-menu">
+                            <nav>
+                                <ul id="navigation">
+                                    <li><a href="createpost2.html">Create post</a></li>
+
+                                    <li><a href="#">View posts <i class="ti-angle-down"></i></a>
+                                        <ul class="submenu">
+                                            <li><a href="pendingposts2.html">Pending</a></li>
+                                            <li><a href="fulfilledposts2.html">Fulfilled <span class="notification-indicator">!</span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li><div class="notification-wrapper">
+                                        <div class="bell-icon">
+                                          <i class="fas fa-bell"></i>
+                                          <span class="badge" id="notification-badge"></span>
+                                          <div class="notification-dropdown">
+                                            <ul id="notification-list">
+                                              <!-- Notifications will be added dynamically using JavaScript -->
+                                            </ul>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      
+                                      </li>
+                                </ul>
+                            </nav>
+                            <div class="Appointment">
+                                <div class="book_btn d-none d-lg-block">
+                                    <li><a href="index.html">Log Out</a></li>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="mobile_menu d-block d-lg-none"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- header-end -->
+<div id="successModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Donation post submitted successfully!</p>
+    </div>
+</div>
+
+<div class="bradcam_area breadcam_bg overlay d-flex align-items-center justify-content-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="bradcam_text text-center">
+                    <h3>Organization</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="dynamic-content-container">
+    <!-- Content generated dynamically will be appended here -->
+</div>
+<div id="account-details">
+    <h4>Account Information</h4>
+    <div class="account-grid">
+        <div class="account-detail">
+            <label for="first-name">First Name:</label>
+            <span id="first-name">John</span>
+            <button class="alter-detail-btn" data-detail="first-name">Alter</button>
+        </div>
+        <div class="account-detail">
+            <label for="last-name">Last Name:</label>
+            <span id="last-name">Doe</span>
+            <button class="alter-detail-btn" data-detail="last-name">Alter</button>
+        </div>
+        <div class="account-detail">
+            <label for="gender">Gender:</label>
+            <span id="gender">Male</span>
+            <button class="alter-detail-btn" data-detail="gender">Alter</button>
+        </div>
+        <div class="account-detail">
+            <label for="email">Email:</label>
+            <span id="email">john.doe@example.com</span>
+            <button class="alter-detail-btn" data-detail="email">Alter</button>
+        </div>
+        <div class="account-detail">
+            <label for="password">Password:</label>
+            <span id="password">*********</span>
+            <button class="alter-detail-btn" data-detail="password">Alter</button>
+        </div>
+        <div class="account-detail">
+            <label for="contact-number">Contact Number:</label>
+            <span id="contact-number">123-456-7890</span>
+            <button class="alter-detail-btn" data-detail="contact-number">Alter</button>
+        </div>
+        <div class="account-detail">
+            <label for="organization-name">Organization Name:</label>
+            <span id="organization-name">Example Organization</span>
+            <button class="alter-detail-btn" data-detail="organization-name">Alter</button>
+        </div>
+        <div class="account-detail">
+            <label for="organization-type">Organization Type:</label>
+            <span id="organization-type">Non-profit</span>
+            <button class="alter-detail-btn" data-detail="organization-type">Alter</button>
+        </div>
+        <div class="account-detail">
+            <label for="organization-address">Organization Address:</label>
+            <span id="organization-address">123 Example St</span>
+            <button class="alter-detail-btn" data-detail="organization-address">Alter</button>
+        </div>
+        <div class="account-detail">
+            <label for="area">Area:</label>
+            <span id="area">Example Area</span>
+            <button class="alter-detail-btn" data-detail="area">Alter</button>
+        </div>
+        <div class="account-detail">
+            <label for="governorate">Governorate:</label>
+            <span id="governorate">Example Governorate</span>
+            <button class="alter-detail-btn" data-detail="governorate">Alter</button>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    $(document).ready(function() {
+      // Delay the appearance of the notification after 10 seconds
+      setTimeout(function() {
+        $('#notification-badge').text("1");
+        $('#notification-list').append('<li>New Post!</li>');
+      }, 10000); // 10 seconds delay
+      
+      $('.bell-icon').hover(function() {
+        $('.notification-dropdown').show();
+      }, function() {
+        $('.notification-dropdown').hide();
+      });
+    });
+  </script>
+
+<script>
+    // Function to handle clicking on "Create post" link
+    document.addEventListener("DOMContentLoaded", function() {
+        var dynamicContentContainer = document.getElementById('dynamic-content-container');
+        var accountDetailsContainer = document.getElementById('account-details');
+
+        // Function to handle clicking on "Create post" link
+        var createPostLink = document.querySelector('a[href="createpost2.html"]');
+        if (createPostLink) {
+            createPostLink.addEventListener("click", function(event) {
+                event.preventDefault(); // Prevent the default behavior of the link
+
+                // Call the function to create donation post and insert it before the account details
+                var donationPost = createDonationPost();
+                dynamicContentContainer.insertBefore(donationPost, accountDetailsContainer);
+            });
+        }
+
+    // Other JavaScript code for functionality
+});
+    function createDonationPost() {
+    // Show form to choose category
+    var categoryForm = document.createElement('form');
+        categoryForm.innerHTML = `
+            <h4>Create Donation Post</h4>
+            <label for="category">Choose category:</label>
+            <select id="category" name="category">
+                <option value="clothes">Clothes</option>
+                <option value="toys">Toys</option>
+                <!-- Add other options... -->
+            </select>
+            <button type="submit">Next</button>
+        `;
+
+    // Append the form to the dynamic content container
+    document.getElementById('dynamic-content-container').appendChild(categoryForm);
+
+    categoryForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        var category = categoryForm.elements['category'].value;
+        categoryForm.remove(); // Remove category form
+
+        // Show form to enter donation details based on selected category
+        var detailsForm = document.createElement('form');
+        detailsForm.innerHTML = `
+            <h4>Enter Donation Details</h4>
+            <label for="description">Description:</label>
+            <input type="text" id="description" name="description" required>
+            <!-- Add other fields based on category... -->
+            <button type="submit">Submit</button>
+        `;
+        document.getElementById('dynamic-content-container').appendChild(detailsForm);
+
+        detailsForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Gather donation details and submit
+            var donationDetails = {
+                category: category,
+                description: detailsForm.elements['description'].value,
+                // Gather other details based on category...
+            };
+            console.log('Donation details:', donationDetails);
+            localStorage.setItem('pendingDonation', JSON.stringify(donationDetails));
+
+            // Here you can submit the donation details via AJAX or any other method
+            // After submission, display success message and remove forms
+            displaySuccessMessage();
+            removeForms();
+        });
+    });
+
+}
+document.addEventListener("DOMContentLoaded", function() {
+    // Retrieve pending donation details from localStorage
+    var pendingDonation = localStorage.getItem('pendingDonation');
+    if (pendingDonation) {
+        // Parse the JSON string to get the object
+        pendingDonation = JSON.parse(pendingDonation);
+        
+        // Display the pending donation details (you can append it to a table or any other HTML structure)
+        var pendingDetailsContainer = document.getElementById('pending-details-container');
+        if (pendingDetailsContainer) {
+            var html = `
+                <h4>Pending Donation Details</h4>
+                <p>Category: ${pendingDonation.category}</p>
+                <p>Description: ${pendingDonation.description}</p>
+                <!-- Add other details as needed -->
+            `;
+            pendingDetailsContainer.innerHTML = html;
+        }
+        
+        // Clear the stored pending donation details from localStorage
+        localStorage.removeItem('pendingDonation');
+    }
+});
+
+
+function displaySuccessMessage() {
+    var successModal = document.getElementById('successModal');
+    successModal.style.display = "block";
+
+    // Close the modal when the close button or outside of modal is clicked
+    var closeBtn = successModal.querySelector(".close");
+    closeBtn.onclick = function() {
+        successModal.style.display = "none";
+    }
+    window.onclick = function(event) {
+        if (event.target == successModal) {
+            successModal.style.display = "none";
+        }
+    }
+}
+
+function removeForms() {
+    var forms = document.querySelectorAll('form');
+    forms.forEach(function(form) {
+        form.remove();
+    });
+}
+
+var formStyles = `
+    <style>
+        /* Adjustments for the forms that appear after clicking */
+
+        /* Form container */
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        /* Form headings */
+        form h4 {
+            font-size: 24px;
+            color: #333333;
+            margin-bottom: 20px;
+        }
+
+        /* Form labels */
+        form label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #555555;
+        }
+
+        /* Form input fields */
+        form input[type="text"],
+        form select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        /* Form submit button */
+        form button[type="submit"] {
+            background-color: #3CC78F;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        form button[type="submit"]:hover {
+            background-color: #5aa85e;
+        }
+
+        /* Adjustments for specific fields based on category */
+        /* Add your specific styles here */
+    </style>
+`;
+document.body.insertAdjacentHTML('beforeend', formStyles);
+document.addEventListener("DOMContentLoaded", function() {
+            var alterDetailBtns = document.querySelectorAll('.alter-detail-btn');
+
+            // Function to handle altering or deleting account detail
+            alterDetailBtns.forEach(function(btn) {
+                btn.addEventListener('click', function() {
+                    var detailId = btn.getAttribute('data-detail');
+                    var detailElement = document.getElementById(detailId);
+
+                    var confirmAlter = confirm('Do you want to alter or delete this detail?');
+                    if (confirmAlter) {
+                        var newValue = prompt('Enter the new value (or leave blank to delete):', detailElement.textContent);
+                        if (newValue !== null) {
+                            if (newValue.trim() === "") {
+                                // Delete the detail if the new value is empty
+                                detailElement.innerHTML = ''; // Remove the content of the detail element
+                                btn.style.display = 'none'; // Hide the alter button
+                                alert('Detail deleted successfully.');
+                                // Implement logic to update the account details on the server
+                            } else {
+                                // Update the detail with the new value
+                                detailElement.textContent = newValue;
+                                alert('Detail altered successfully.');
+                                // Implement logic to update the account details on the server
+                            }
+                        }
+                    }
+                });
+            });
+        });
+
+</script>
+
